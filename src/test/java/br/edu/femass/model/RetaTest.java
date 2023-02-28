@@ -30,8 +30,15 @@ public class RetaTest {
     }
 
     @Test
-    void testaGetTamanho(){
+    void testaGetTamanhoPontos(){
         Reta r = new Reta(0.0,0.0, 0.0, 5.0);
+
+        assertEquals(5, r.getTamanho());
+    }
+
+    @Test
+    void testaGetTamanho2Pontos(){
+        Reta r = new Reta(new Ponto(0.0, 0.0), new Ponto(0.0, 5.0));
 
         assertEquals(5, r.getTamanho());
     }
